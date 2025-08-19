@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "c650ca69-2d1f-427c-b4f7-0f3aeb495b6b",
+		"name": "Teste da API REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36648744"
+	},
+	"item": [
+		{
+			"name": "get vazio",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nome\": \"Estudar API REST\",\r\n   \"prioridade\": 1,\r\n   \"concluida\": false\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/tarefas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nome\": \"Estudar API REST\",\r\n   \"prioridade\": 1,\r\n   \"concluida\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tarefas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get ID 1 (404)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nome\": \"Estudar API REST\",\r\n   \"prioridade\": 1,\r\n   \"concluida\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tarefas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consulta",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nome\": \"Estudar API REST\",\r\n   \"prioridade\": 1,\r\n   \"concluida\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tarefas/224e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas",
+						"224e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put prioridade conc",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nome\": \"Estudar API REST\",\r\n   \"prioridade\": 2,\r\n   \"concluida\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tarefas/224e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas",
+						"224e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patch concluida",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"concluida\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tarefas/224e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas",
+						"224e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consulta",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nome\": \"Estudar API REST\",\r\n   \"prioridade\": 1,\r\n   \"concluida\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tarefas/224e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas",
+						"224e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nome\": \"Estudar API REST\",\r\n   \"prioridade\": 1,\r\n   \"concluida\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tarefas/224e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas",
+						"224e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

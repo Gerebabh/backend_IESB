@@ -1,0 +1,15 @@
+{
+  "name": "pratica01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx json-server db.json"
+  },
+  "keywords": [],
+  "author": "Geraldo Lucio",
+  "license": "ISC",
+  "description": "Banco de Tarefas01",
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "contatos": [
+    {
+      "id": "6cc6",
+      "nome": "Geraldo",
+      "email": "geralucio@gmail.com"
+    },
+    {
+      "id": "2354",
+      "nome": "Erica",
+      "email": "ericacneves@gmail.com"
+    },
+    {
+      "id": "9936",
+      "nome": "Oreo",
+      "email": "oreolino@gmail.com",
+      "end": "Condomínio Quintas do Sol",
+      "numero-res": "9 E 08 02",
+      "complemento": "Casa"
+    },
+    {
+      "id": "2e27",
+      "nome": "Marly",
+      "email": "marlyfersantos@gmail.com",
+      "celular": "31 920000657",
+      "end": "Rua Nossa Senhora de Lourdes",
+      "numero-res": "812",
+      "complemento": "Casa",
+      "Bairro": "São Judas Tadeu",
+      "Cidade": "Florestal",
+      "UF": "MG"
+    }
+  ]
+}
