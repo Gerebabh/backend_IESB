@@ -1,0 +1,13 @@
+{
+  "name": "aula03",
+  "version": "1.0.0",
+  "main": "index.js",
+  "typegit ": "module",
+  "scripts": {
+    "test": "node index.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
