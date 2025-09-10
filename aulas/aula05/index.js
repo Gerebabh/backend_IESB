@@ -1,51 +1,41 @@
-// Importa o Framework
-const express = require ("express");
+// importa o framework 
+const express = require("express"); 
 
-// Cria uma instancia da aplicacao
-const app = express();
+// importa middleware de terceiros
+const cors = require("cors"); 
 
-// Cria uma funcao para teste. Tem que ser antes da inicializacao do aplicativo
-// Middleware de aplicacao
-app.use (function(req, res, next) {
-    console.log('Passei aqui!')
-    next();
-});
+// Importa arquivo de rotas
+const router = require("./routerTarefa");
 
-//Mesma funcao em arrow function
-// app ((req, res, next) => {
-//     console.log('Passei aqui!')
-//     next();
-// });
+// criar uma instancia da aplicação 
 
-// Middleware de Rota
-const router = express.Router();
+const app = express() ; 
 
-router.get('/', (req,res) => {
-    res.send('Chegou aqui!');
-});
+// middleware embutido ou integrado -> ativar um middleware app.use() -> ele usa os middlewares na ordem de precedência. 
 
-router.post('/', (req, res) => {
-    res.status(201).send('Inserido com Sucesso')
-});
+app.use(express.json());   // converte o json que recebe de requisição.  O primeiro middleware. (pra já converter tudo pra JSON)
+app.use(express.urlencoded({extended:false})) ; //?param1=valor&param2=valor2 -> pegar parâmetros que vêm na URL. -> o extended padroniza. pra sempre vir assim.
 
-router.get("/:id", (req, res) => {
-    const { id } = req.params; // {id: 1, param2: 5, param3: 6}
-    if(id == 1) return res.send("Achei");
-    // res.status(404).send('Nao achei');
-    throw Error ('Nao achei');
-});
+// middleware de terceiros.     
+app.use(cors()); 
 
-app.use('/tarefas', router);
-
-// Middleware de Erro
-app.use((err, req, res, next) => {
-    console.log(err.stack)
-    console.error(err.stack);
-    res.status(500).send('Deu Ruim!! Algo de errado nao esta certo!')
+// arrow-function (equivale, a mesma coisa )
+// middleware de app
+app.use( (req,res, next) => { 
+    console.log("passei aqui")
+    next(); 
 })
 
-// Inicializa a aplicacao
-app.listen(3000, () =>{
-    console.log('A Aplicação esta ON')
-});
+app.use("/tarefas", router); 
 
+// middleware de erro  -> encapsular os erros / os erros entram aqui 
+
+app.use((err,req,res,next) => { 
+    console.log(err.stack); 
+    res.status(500).send("Algo de errado não está certo!")
+})
+
+// subir a aplicação (inicializar) -> geralmente é último código. 
+app.listen(3000, () => {
+    console.log("App está ON")
+})
