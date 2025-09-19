@@ -302,9 +302,9 @@ module.exports = router;
   - `router.get('/users/:id', ...)` → busca usuário por ID
   - `router.put('/users/:id', ...)` → atualiza usuário
   - `router.delete('/users/:id', ...)` → deleta usuário
-  - 
+
 ---
-7. Editar o arquivo `app.js`
+1. Editar o arquivo `app.js`
 Dentro de `src\app.js`, adicionando:
 Obs.: Este trecho deve ser adicinado antes de `module.exports`, motivo é que tudo que for utilizado precisa ser registrado antes de exportar.
 
