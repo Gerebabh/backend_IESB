@@ -1,0 +1,12 @@
+db.usuarios.find({}, { _id: 0, nome: 1 })
+db.usuarios.find({ nome: "Geraldo Lucio" })
+db.usuarios.find({},{"nome: Geraldo Lucio"})
+db.usuarios.find({})
+db.usuarios.insertOne({nome: "Geraldo Lucio", email: "geralucio@gmail.com"})
+db.usuarios.find({})
+show collections
+db.usuarios.insertOne({nome: "Jose", email: "jose@iesb.br"})
+show collections
+use meubanco
+use local
+show dbs
