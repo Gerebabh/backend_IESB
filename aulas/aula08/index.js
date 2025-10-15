@@ -1,5 +1,5 @@
 const readline = require('readline-sync');
-const conecta = require("./database") ; //supertest só funciona com essa sintaxe de importação de módulos. 
+const conecta = require("./database"); //supertest só funciona com essa sintaxe de importação de módulos. 
 
 
 //inserir dentro de uma coleção 
