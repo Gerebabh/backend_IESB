@@ -62,11 +62,19 @@ describe("Teste do recurso / Tarefas", () => {
         expect(response.status).toBe(400);
         expect(response.body.msg).toBe("ID Invalido");
     });
-
+        
     test('PUT / id deve retornar 404', async() => {
         const response = await request.get(`${url}/000000000000000000000000`);
         expect(response.status).toBe(404);
         expect(response.body.msg).toBe("Tarefa nao encontrada");
+    });
+
+    test('PUT / id deve retornar 422', async() => {
+        const response = await request
+        .put(`${url}/${id}`)
+        .send({nome: "", concluida: true });
+        expect(response.status).toBe(422);
+        expect(response.body.msg).toBe("Nome da tarefa e obrigatorio");
     });
 
     test('DELETE / id deve retornar 204', async() => {
