@@ -11,6 +11,6 @@ npm install
 npm install dotenv jsonwebtoken
 ```
 ```bash
-npm install nodemon --save-dev
+npm install nodemon jest supertest --save-dev
 ```
 
